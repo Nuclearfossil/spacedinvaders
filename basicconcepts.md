@@ -36,7 +36,7 @@ That's a great definition, if I've ever heard one. This begs us to question, wha
 
 Back in the day, that's how you wrote a computer program. And there's something to be said for being able to read that (especially in games programming). But that is well outside the scope of these articles.
 
-## A function
+### A function
 
 That example is incredibly hard to read. And it's also incredibly hard to write. Considering all that program does is calculate Pi. And by 'calculate', I mean it simply gives us the value `3.14`.
 
@@ -103,7 +103,7 @@ After that line is executed, we would have a new variable, `result` that would c
 
 How would we use that for real? I mean, the entire point of this article is to see a program in action!  We're going to use a web app called [C++ shell](http://cpp.sh/) to muck around with coding.
 
-## An Actual, Honest To God, Program!
+### An Actual, Honest To God, Program!
 
 I've created a simple stub of a program [here](cpp.sh/42me).
 
