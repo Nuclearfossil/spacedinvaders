@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "initialtemplate", "initialtemplate\initialtemplate.vcxproj", "{BE657A1F-E946-4C7D-A719-F5683B870EBE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpacedInvadersTemplate1", "SpacedInvadersTemplate1\SpacedInvadersTemplate1.vcxproj", "{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{BE657A1F-E946-4C7D-A719-F5683B870EBE}.Release|x64.Build.0 = Release|x64
 		{BE657A1F-E946-4C7D-A719-F5683B870EBE}.Release|x86.ActiveCfg = Release|Win32
 		{BE657A1F-E946-4C7D-A719-F5683B870EBE}.Release|x86.Build.0 = Release|Win32
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Debug|x64.ActiveCfg = Debug|x64
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Debug|x64.Build.0 = Debug|x64
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Debug|x86.ActiveCfg = Debug|Win32
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Debug|x86.Build.0 = Debug|Win32
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Release|x64.ActiveCfg = Release|x64
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Release|x64.Build.0 = Release|x64
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Release|x86.ActiveCfg = Release|Win32
+		{DA2C74B2-4197-42A4-B1F9-41C2CF8AA878}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

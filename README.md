@@ -38,4 +38,5 @@ The other aspect of this is that I want anyone who's reading this to feel engage
 I'll be building this out as I go:
 
 - Introduction (You're currently here)
-- [basic concepts](basicconcepts.md)
+- [Basic Concepts](basicconcepts.md)
+- [Your First Local Program](firststeps.md)
