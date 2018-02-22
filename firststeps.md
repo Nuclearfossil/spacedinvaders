@@ -1,5 +1,76 @@
 # Your first real program
 
+## Review
+
+Hey, so from the last article, I left you with a question. In the following code, there's a big bug. Were you able to find it?
+
+``` C++
+// Calculating an exponent
+#include <stdio.h>
+
+float calcPow(float base, float exponent)
+{
+    int iterations = exponent;
+    if (exponent < 0)
+    {
+        iterations *= -1.0f;
+    }
+
+    float result = base;
+    for (int index = 0; index < (iterations - 1); index++)
+    {
+        result *= base;
+    }
+
+    if (exponent < 0)
+    {
+        result = 1.0f / result;
+    }
+    return result;
+}
+
+int main()
+{
+    printf("5 to the power of 3 is: %f\n", calcPow(5, 3));
+    printf("5 to the power of -3 is: %f\n", calcPow(5, -3));
+}
+```
+
+Let me give you a hint. What happens if you were to use 0 as the exponent? Or the base? Or calculate a negative exponent?
+
+So, if we were to replace the `main` function above with this:
+
+``` C++
+    printf("5 to the power of 0 is: %f\n", calcPow(5, 0));
+    printf("0 to the power of -3 is: %f\n", calcPow(0, 3));
+    printf("0 to the power of -3 is: %f\n", calcPow(0, -3));
+```
+
+Our output looks like this:
+
+```
+5 to the power of 0 is: 5.000000
+0 to the power of -3 is: 0.000000
+0 to the power of -3 is: inf
+```
+
+Division by zero actually is bad, mathematically (it's undefined). In C++, dividing a floating point number by a zero (floating point number) will actually return a floating point value that the compiler recognizes as infinity.
+
+If we were to modify the program above to actually divide an integer by 0 ...
+
+``` C++
+    printf("5 to the power of 0 is: %f\n", calcPow(5, 0));
+    printf("0 to the power of -3 is: %f\n", calcPow(0, 3));
+    printf("0 to the power of -3 is: %f\n", calcPow(0, -3));
+    printf("5 divideb by 0 is: %d\n", 5/0);
+```
+
+Doesn't actually spew out any output. Check out the link [here](http://cpp.sh/46orl).
+
+We are given a warning about dividing by zero tho.
+
+OK, on to the next, new thing!
+
 ## Summary
 
 In this article, we move from web-based C++ tools, to something you can run on your own machine, using Visual Studio 2017.
