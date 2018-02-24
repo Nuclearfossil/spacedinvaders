@@ -55,5 +55,6 @@ I'll be building this out as I go:
 
 - Introduction (You're currently here)
 - [Basic Concepts](basicconcepts.md)
+- [>incomplete< More Basic Concepts](morebasicconcepts.md)
 - [Your First Local Program](firststeps.md)
 - [Something you can compile on your own machine](firststeps.md)
