@@ -14,7 +14,15 @@ Then feel free to go on to the next topic. If anything there feels odd or unfami
 
 ### Program
 
-I was tempted to make a very esoteric 'Tron' joke here, but I suspect you, Dear Reader, may only have a passing acquaintance with that bit of film history. Oh, tis the sad state of the world today /irony
+![This is a program, right?](images/thisisaprogramright.png)
+
+This is a program, right?
+
+Right?
+
+Sorry, couldn't help myself.
+
+...
 
 Anyways ...
 
@@ -22,7 +30,27 @@ A program, according to Wikipedia is:
 
 > a collection of instructions that performs a specific task when executed by a computer. A computer requires programs to function.
 
-That's a great definition, if I've ever heard one. This begs us to question, what do we mean by 'instructions'. At it's lowest level, that's assembly. Here's an example (this is from the GCC 7.3 x86-64 bit compiler):
+That's a great definition. However 'instructions' can be a be of an abstract term? We're used to seeing instructions when we put together IKEA furniture, when following a recipie, or following GPS directions. But for a computer, it's a _little_ different. Whenever you run a program, it's performing a series of steps:
+
+- send an email to a recepient.
+- view a web page
+- play a game
+
+However, each one of the previous examples can be further refined. For example, sending an email consists of:
+
+- Convert the 'email' you created into something that formatted for transmission to a destination.
+- if there are any attachments, those have to be converted into something that can be sent via email.
+- If the email address is improperly formatted, don't send it
+- The email bounced for some reason, we have to deal with that.
+
+And each one of those steps can be even further broken down:
+
+- Convert the 'email' you created into something that formatted for transmission to a destination.
+  - Create an email header that has the correct routing information.
+  - Take the subject line of the email and add that to the email header.
+  - Take the body of the text and add it to a buffer that is attached to the email header.
+
+And even those steps can be broken down. At it's lowest level, the lowest level would be assembly. Here's an example (this is from the GCC 7.3 x86-64 bit compiler, for those wondering):
 
 ``` asm
   push rbp
@@ -34,11 +62,11 @@ That's a great definition, if I've ever heard one. This begs us to question, wha
   .long 1078523331
 ```
 
-Back in the day, that's how you wrote a computer program. And there's something to be said for being able to read that (especially in games programming). But that is well outside the scope of these articles.
+It actually gets more atomic than that, as that get converted into a series of 0's and 1's. Let's not follow that trope, as nobody actually reads that in real life. However, it really wasn't that long ago when programs were written using that syntax. As early as 2003, that was a common programming language for writing GPU shaders; programs that are actually run on your video card to render graphics. As a programmer, there's something to be said for being able to read assembly, especially in games programming. Rest easy, we won't be covering assembly as that is well outside the scope of these articles.
 
 ### A function
 
-That example is incredibly hard to read. And it's also incredibly hard to write. Considering all that program does is calculate Pi. And by 'calculate', I mean it simply gives us the value `3.14`.
+That example is incredibly hard to read, let alone write. Especially considering all that program does is give us a rough approximation of Pi: `3.14`.
 
 Here's what that code actually looks like, in C, as a _function_:
 
@@ -50,11 +78,9 @@ float calcPi()
 }
 ```
 
-Even if you've never written a line of code before, five bucks says you have have a pretty good idea what the intent of that code is.
+This is a great place to start; let's break that bit of code down, line by line.
 
-However, this is a great place to start - so let's break that bit of code down, line by line.
-
-We see the first line in the example illustrates the concept of a 'comment'. This is a bit of code that will NEVER get compiled - it is actually removed from the executable. But it's there for documentation purposes (Future Ash may not be as smart, or in the same headspace as Present Ash, and might need some reminders as to what he's thinking about). Comments are tremendously usefull and you'll see them littered through the upcoming articles.
+The first line in the example illustrates the concept of a 'comment'. This is a bit of code that is never put into the executable. It's there for documentation purposes: Future me may not be as 'clever', or in the same headspace as Present-day me and might need some reminders as to what he's thinking about. Comments are tremendously useful and you'll see them littered through the upcoming articles. If you're inspecting other people's code, hopefully they've added comments as well to guide you in understanding their thought process when they wrote their code.
 
 Next up, what we are doing is declaring a function, called `calcPi`. What's a function? Think of it like a command that you can get your program to do.  We've all given a dog a command to 'sit' at some point in time, right? Well, this is the same kind of thing. We're asking the program to perform a specific command (or function ... or even instruction, but that would be pushing it).
 
