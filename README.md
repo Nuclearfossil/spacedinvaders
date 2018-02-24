@@ -6,24 +6,38 @@ For many, many years I've wanted to put together a tutorial in programming langu
 
 So I thougth I'd throw my hat into the ring on this one.
 
-What we're going to build over the course of this series is a functional (not necessarily complete) Space Invaders clone. I chose this becase:
+What we're going to build over the course of this series is a functional (not necessarily complete) Space Invaders clone. I chose this because:
 
-a) I'm a game developer by day. Write what you know.
-b) There's a buttload of source material that people can reference
-c) Gameplay logic is trivial.
-d) It allows, at an incredibly low fidelity, us to cover a great deal of ground.
+<ol type="a">
+ <li>I'm a game developer by day. Write what you know.</li>
+ <li>There's a buttload of source material that people can reference.</li>
+ <li>Gameplay logic is trivial.</li>
+ <li>It allows, at an incredibly low fidelity, us to cover a great deal of ground.</li>
+</ol>
 
 ## The Method
 
 I'm going to be using a mix of technologies for this.
 
-- Visual Studio Community 2017 : for our C++ editing needs
-- C++ Shell : For quick and easy C/C++ explainations.
-- Allegro : A library that covers the majority of our media needs.
-- GitHub : Some place to put all this stuff
-- Markdown : How to document all this.
-- Google Classroom : Possibly a way to create conversations about topics.
-- Krita and The Gimp : Image editing
+- Visual Studio Community 2017
+  - This is what's caused an IDE - an Integrated Development Environment.
+  - This is where we can edit the 'code' that creates a program.
+  - We also use it to 'build' the program.
+  - And, we also use it to debug the program when things go sideways.
+- C++ Shell 
+  - This is a web-based C/C++ compiler.
+  - It's very simple to use and allows us to quickly try out ideas (and try code snippets).
+- Allegro
+  - A library that covers the majority of our media needs (drawing lines, images, text).
+  - Also is a nice utility wrapper for operating system functionality.
+- GitHub
+  - You're here.
+  - Github is a place to store code (and share it).
+  - Also can be used to document code.
+- Markdown
+  - You won't need this, but I use Markdown as my article formatting language.
+- Krita and The Gimp
+  - Image editing
 
 I'm also going to be writing in a very informal manner. I write like I talk. I'll be doing a lot of edits as I build out this documentation, so you may want to re-read sections (I'll call them out as I edit them).
 
