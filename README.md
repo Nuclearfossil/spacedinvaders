@@ -2,11 +2,11 @@
 
 ## Rationale
 
-For many, many years I've wanted to put together a tutorial in programming languages that would be appropriate for all ages and disciplines. It's bothered me that there haven't been any 'accessible' tutorials out there; tutorials that go from zero to competency in a way that _everyone_ can understand. But that's a really hard problem to try and get right.
+For many, many years I've wanted to put together a tutorial in programming languages that would be appropriate for all ages and disciplines. It's bothered me that there haven't been any 'accessible' tutorials out there; tutorials that go from zero to competency in a way that _everyone_ can understand. That is a really hard problem to try and get right.
 
 So I thougth I'd throw my hat into the ring on this one.
 
-What we're going to build over the course of this series is a functional (but not necessarily complete) Space Invaders clone. I chose this becase:
+What we're going to build over the course of this series is a functional (not necessarily complete) Space Invaders clone. I chose this becase:
 
 a) I'm a game developer by day. Write what you know.
 b) There's a buttload of source material that people can reference
@@ -29,9 +29,11 @@ I'm also going to be writing in a very informal manner. I write like I talk. I'l
 
 ## So why not just grab a book/take a class?
 
-This is, by no stretch of the imagination, meant to replace formal classes, other books or other material. I encourage reading and experimenting as much as possible. This is meant as a supplement to other materials. I will try not to gloss over topics, but if there are better resources for explaining the material, I will be (gladly) referring to them.
+Well ... arguably you should. One web article can't replace a university education. Or a degree from a college. These articles aren't meant to replace formal classes and other reference material. I personally encourage researching and experimenting as much as possible any programming language that you can find. The intent of these articles is to act as a supplement to other materials. I will try not to gloss over topics, but if there are better resources for explaining the material, I will be (gladly) referring to them.
 
-The other aspect of this is that I want anyone who's reading this to feel engaged. If there are any questions, or suggestions, I'd like to be able to accomdate them as much as possible. Education is a two way street. But also respect that I can only do so much in my spare time ;)
+That said, I do find that there are some ideas, concepts and techniques that are either glossed over, skipped entirely, or just wrong, in a great deal of materials out there (and in many universities, in my experience). My goal in these articles to to cover the fundamentals, as I see them and try to convey them in a fashion that is consumable to the reader, given only a mildly passing curiousity in programming. Hopefully this instills a sense of curiousity about programming and the C/C++ language that you may not have had in the past.
+
+The other aspect of this is that I want anyone who's reading this to feel engaged. If there are any questions, or suggestions, I'd like to be able to accomdate them as much as possible. For now, I'm going to try and answer all questions through twitter - just reply to this tweet (until I find something better): https://twitter.com/nuclearfossil/status/967220497569083392
 
 ## Sylabus (did I spell that right?)
 
