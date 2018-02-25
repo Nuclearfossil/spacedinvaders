@@ -57,6 +57,6 @@ I'll be building this out as I go:
 - [Basic Concepts](00.basicconcepts.md)
 - [Function Primer](01.functionprimer.md)
 - [More on Functions](01.morewithfunctions.md)
-- [Pointers](01.pointers.md)
 - [Program Flow Control](01.programflowcontrol.md)
+- [Pointers](01.pointers.md)
 - [Something you can compile on your own machine](02.firststeps.md)
