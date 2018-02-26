@@ -1,0 +1,24 @@
+Back in the day (the dark days of CGA, EGA and VGA adapters), if you wanted to draw an image onto the screen, you had to write to a specific memory address and put a number in there that represented a color. I won't pain you with the details of CGA and EGA, but I will talk a little about VGA.
+
+VGA video cards had several 'modes' of operation:
+
+  - 640 x 480 resolution with 16 colors
+  - 320 x 200 in 256 colors
+
+There are a few other modes there, but those are the ones that only mattered. The colours you could use were defined by a palette that a programmer could set. You could build a pretty custom palette for each mode, but until you changed the palette, you could only use a color in that palette. And you couldn't change the palette in the middle of a frame.
+
+Sierra On-Line games were the masters of this technique:
+
+![Waterfall](images/Waterfall.gif)
+
+The only thing that is changing in that image is the 'palette' the image is using. Here's a great write-up on the technique, [for reference](http://scicompanion.com/Documentation/palettecycling.html)
+
+How did we go about actually putting graphics onto the screen?
+
+First off, we set the graphics mode that we wanted to use (not going into details on this). Once we had this graphcs mode set up, we then could write to video memory, as it mapped to the PCs memory in an addressable fashion (typically at the hex address 0XA0000 and -XBFFFF).
+
+At those starting addresses, we could map that memory into an array, or even just a pointer (it was always at that address) and write a value to it. Because these were palettized displays, we werent' actually putting the actual color into the on-screen pixel, but we were putting an index into a palette of colors to use. If you had 256 colors in your palette or Look Up Table (LUT), the indices were just the element numbers in that palette array.
+
+![Delux Paint II Palette](images/dpiipalette.png)
+
+That's an example of the paint program Deluxe Paint II and the palette editing tools we had.
