@@ -60,4 +60,5 @@ I'll be building this out as I go:
 - [Program Flow Control](01.programflowcontrol.md)
 - [Pointers](01.pointers.md)
 - [Something you can compile on your own machine](02.firststeps.md)
-- [Arrays and Graphics](02.arrays.md)
+- [Arrays](02.arrays.md)
+- [Graphics Introduction](03.graphics.md)
