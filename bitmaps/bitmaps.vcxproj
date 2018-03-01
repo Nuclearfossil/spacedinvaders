@@ -183,6 +183,12 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\resources\background.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="..\resources\badimagesheet.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
     <Image Include="..\resources\imagesheet.png">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>

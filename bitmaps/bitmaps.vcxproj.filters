@@ -20,5 +20,11 @@
     <Image Include="..\resources\imagesheet.png">
       <Filter>resources</Filter>
     </Image>
+    <Image Include="..\resources\badimagesheet.png">
+      <Filter>resources</Filter>
+    </Image>
+    <Image Include="..\resources\background.png">
+      <Filter>resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
