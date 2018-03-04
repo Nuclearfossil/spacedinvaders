@@ -182,6 +182,14 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\resources\background.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="..\resources\imagesheet01.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\AllegroDeps.1.7.0.0\build\native\AllegroDeps.targets" Condition="Exists('..\packages\AllegroDeps.1.7.0.0\build\native\AllegroDeps.targets')" />
