@@ -62,6 +62,7 @@ I'll be building this out as I go:
 - [Something you can compile on your own machine](02.firststeps.md)
 - [Arrays](02.arrays.md)
 - [Graphics Introduction](03.graphics.md)
+- [Simple Animation](03.simpleanimation.md)
 
 ## Related Materials
 
