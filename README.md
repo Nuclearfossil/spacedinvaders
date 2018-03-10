@@ -64,3 +64,6 @@ I'll be building this out as I go:
 - [Graphics Introduction](03.graphics.md)
 - [Simple Animation](03.simpleanimation.md)
 
+## Related Materials
+
+- [Introduction to Programming for Games by Andrew Simpson](github.com/asimpson2004/ASCII_Invaders)
