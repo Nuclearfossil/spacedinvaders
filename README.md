@@ -63,6 +63,7 @@ I'll be building this out as I go:
 - [Arrays](02.arrays.md)
 - [Graphics Introduction](03.graphics.md)
 - [Simple Animation](03.simpleanimation.md)
+- [More Animation](03.moreanimation.md)
 
 ## Related Materials
 

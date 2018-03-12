@@ -189,6 +189,9 @@
     <Image Include="..\resources\imagesheet01.png">
       <DeploymentContent>true</DeploymentContent>
     </Image>
+    <Image Include="..\resources\spacedspritesheet.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
