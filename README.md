@@ -64,6 +64,7 @@ I'll be building this out as I go:
 - [Graphics Introduction](03.graphics.md)
 - [Simple Animation](03.simpleanimation.md)
 - [More Animation](03.moreanimation.md)
+- [First Gameplay](04.gameplay01.md)
 
 ## Related Materials
 
