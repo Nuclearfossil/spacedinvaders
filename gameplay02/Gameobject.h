@@ -31,7 +31,7 @@ public:
 
 	void Render();
 
-	void Update(float delta);
+	void Update(float delta, int animFrame);
 
 	bool CollidesWith(GameObject* other);
 };

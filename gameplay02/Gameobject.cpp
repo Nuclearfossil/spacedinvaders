@@ -53,9 +53,10 @@ void GameObject::Render()
 	}
 }
 
-void GameObject::Update(float delta)
+void GameObject::Update(float delta, int animFrame)
 {
-
+	mWorldPosition.X += delta;
+	mAnimFrame = animFrame;
 }
 
 bool GameObject::CollidesWith(GameObject* other)
