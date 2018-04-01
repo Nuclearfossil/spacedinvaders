@@ -42,7 +42,7 @@ void ProcessInput(ALLEGRO_EVENT ev);
 bool ShotCollide(GameObject gameObject);
 
 // Constants
-const int			kMaxInvaders = 60;
+const int		kMaxInvaders = 60;
 const float		kCellX = 44.0f;
 const float		kCellY = 32.0f;
 const double	kImmediate = 0.0;
@@ -50,17 +50,17 @@ const float		kLateralMovement = 150.0f;
 const float		kPlayerShotSpeed = 450.0f;
 
 // Global definitions
-ALLEGRO_DISPLAY*			gDisplay = nullptr;
-ALLEGRO_FONT*					gFont = nullptr;
+ALLEGRO_DISPLAY*		gDisplay = nullptr;
+ALLEGRO_FONT*			gFont = nullptr;
 ALLEGRO_EVENT_QUEUE*	gEventQueue = nullptr;
 
-ALLEGRO_BITMAP*				gBackground = nullptr;
-ALLEGRO_BITMAP*				gImageSheet = nullptr;
+ALLEGRO_BITMAP*			gBackground = nullptr;
+ALLEGRO_BITMAP*			gImageSheet = nullptr;
 
-GameObject						gInvaders[kMaxInvaders];
+GameObject				gInvaders[kMaxInvaders];
 
-GameObject						gGun;
-GameObject						gShot;
+GameObject				gGun;
+GameObject				gShot;
 
 // Enumerations
 enum InputKeys
