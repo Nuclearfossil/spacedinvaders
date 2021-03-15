@@ -20,7 +20,7 @@ What we're going to build over the course of this series is a functional (not ne
 I'm going to be using a mix of technologies for this.
 
 - Visual Studio Community 2017
-  - This is what's caused an IDE - an Integrated Development Environment.
+  - This is what's called an IDE - that stands for 'Integrated Development Environment'.
   - This is where we can edit the 'code' that creates a program.
   - We also use it to 'build' the program.
   - And, we also use it to debug the program when things go sideways.
