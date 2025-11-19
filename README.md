@@ -69,3 +69,30 @@ I'll be building this out as I go:
 ## Related Materials
 
 
+
+## Building with vcpkg (optional)
+
+If you use `vcpkg` to manage C/C++ dependencies, you can configure this project to use the vcpkg toolchain file. The top-level `CMakeLists.txt` will try to detect `vcpkg` automatically from the `VCPKG_ROOT` environment variable or the default path `D:/vcpkg`.
+
+- Recommended (explicit configure):
+
+```powershell
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=D:/vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake --build build --config Release
+```
+
+- Or set `VCPKG_ROOT` and run CMake normally:
+
+```powershell
+$env:VCPKG_ROOT='D:\vcpkg'
+cmake -S . -B build
+cmake --build build --config Debug
+```
+
+- If you need to override the toolchain file for CI or a local build, pass `-DCMAKE_TOOLCHAIN_FILE=...` on the `cmake` configure command line.
+
+- Notes for subprojects:
+  - Avoid hardcoding the toolchain file in subproject `CMakeLists.txt` files; the top-level toolchain is propagated to subdirectories.
+  - Prefer `find_package(... CONFIG REQUIRED)` and target-based `target_link_libraries(myTarget PRIVATE pkg::pkg)` when possible so vcpkg-provided config packages are used.
+
+
