@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(simplesprite01 main.cpp stdafx.cpp)
-set_target_properties(simplesprite01 PROPERTIES FOLDER "Sprites")
+set_target_properties(simplesprite01 PROPERTIES FOLDER "02.Animation")
 
 if(_USE_ALLEGRO_CONFIG)
         if(TARGET allegro::allegro)

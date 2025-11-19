@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(AnimatedPixels main.cpp stdafx.cpp)
-set_target_properties(AnimatedPixels PROPERTIES FOLDER "Animations")
+set_target_properties(AnimatedPixels PROPERTIES FOLDER "01.Arrays")
 
 
 if(_USE_ALLEGRO_CONFIG)

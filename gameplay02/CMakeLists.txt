@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(gameplay02 main.cpp GameObject.cpp stdafx.cpp)
-set_target_properties(gameplay02 PROPERTIES FOLDER "Gameplay")
+set_target_properties(gameplay02 PROPERTIES FOLDER "03.Gameplay")
 
 if(_USE_ALLEGRO_CONFIG)
         if(TARGET allegro::allegro)

@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(WindowLayout main.cpp stdafx.cpp)
-set_target_properties(WindowLayout PROPERTIES FOLDER "Starting")
+set_target_properties(WindowLayout PROPERTIES FOLDER "01.Arrays")
 
 if(_USE_ALLEGRO_CONFIG)
         if(TARGET allegro::allegro)

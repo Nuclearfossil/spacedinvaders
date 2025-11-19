@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(initialtemplate main.cpp)
-set_target_properties(initialtemplate PROPERTIES FOLDER "Template")
+set_target_properties(initialtemplate PROPERTIES FOLDER "00.Template")
 
 if(_USE_ALLEGRO_CONFIG)
         if(TARGET allegro::allegro)

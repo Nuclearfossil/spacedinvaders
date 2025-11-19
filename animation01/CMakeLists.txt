@@ -44,7 +44,7 @@ if(NOT _USE_ALLEGRO_CONFIG AND NOT ALLEGRO_FOUND)
 endif()
 
 add_executable(animation01 main.cpp stdafx.cpp)
-set_target_properties(animation01 PROPERTIES FOLDER "Animations")
+set_target_properties(animation01 PROPERTIES FOLDER "02.Animation")
 
 if(_USE_ALLEGRO_CONFIG)
         if(TARGET allegro::allegro)
