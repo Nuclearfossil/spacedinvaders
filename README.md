@@ -87,11 +87,13 @@ I'll be building this out as I go:
 A `Makefile` wraps the common CMake commands. Run these from the repo root:
 
 ```
-make             # same as make debug
-make debug       # configure + build Debug into build/
-make release     # configure + build Release into build/
-make clean       # delete build/
-make rebuild     # clean + debug
+make                  # same as make debug
+make configure        # configure CMake without building
+make debug            # configure + build Debug into build/
+make release          # configure + build Release into build/
+make relwithdebinfo   # configure + build RelWithDebInfo into build/
+make clean            # delete build/
+make rebuild          # clean + debug
 ```
 
 ### Visual Studio solutions
