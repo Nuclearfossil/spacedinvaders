@@ -1,12 +1,22 @@
 # Auto detect text files and normalize to LF
 * text=auto
 
-# Force LF line endings for scripts and source files
-*.sh text eol=lf
-*.c  text eol=lf
+# Build system — Makefile tabs are significant; CRLF will break make
+Makefile        text eol=lf
+*.cmake         text eol=lf
+CMakeLists.txt  text eol=lf
+
+# Source files
+*.sh  text eol=lf
+*.c   text eol=lf
 *.cpp text eol=lf
-*.h  text eol=lf
-*.py text eol=lf
+*.h   text eol=lf
+*.py  text eol=lf
+*.ps1 text eol=lf
+
+# Docs and config
+*.md   text eol=lf
+*.json text eol=lf
 
 # Binary files — no line ending conversion
 *.png binary
