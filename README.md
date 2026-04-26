@@ -74,6 +74,7 @@ I'll be building this out as I go:
 
 ### Prerequisites
 
+- [Make](https://gnuwin32.sourceforge.net/packages/make.htm) 4.4.1 - install via scoop, Chocolatey, or Winget.
 - [CMake](https://cmake.org/) 3.10+
 - [vcpkg](https://github.com/microsoft/vcpkg) with Allegro 5 installed:
   ```
