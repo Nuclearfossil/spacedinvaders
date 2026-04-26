@@ -70,29 +70,58 @@ I'll be building this out as I go:
 
 
 
-## Building with vcpkg (optional)
+## Building
 
-If you use `vcpkg` to manage C/C++ dependencies, you can configure this project to use the vcpkg toolchain file. The top-level `CMakeLists.txt` will try to detect `vcpkg` automatically from the `VCPKG_ROOT` environment variable or the default path `D:/vcpkg`.
+### Prerequisites
 
-- Recommended (explicit configure):
+- [CMake](https://cmake.org/) 3.10+
+- [vcpkg](https://github.com/microsoft/vcpkg) with Allegro 5 installed:
+  ```
+  vcpkg install allegro:x64-windows
+  ```
+- Set the `VCPKG_ROOT` environment variable to your vcpkg directory (e.g. `E:\vcpkg`), or pass the toolchain file explicitly.
 
-```powershell
-cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=D:/vcpkg/scripts/buildsystems/vcpkg.cmake
-cmake --build build --config Release
+### Quick build (command line)
+
+A `Makefile` wraps the common CMake commands. Run these from the repo root:
+
+```
+make             # same as make debug
+make debug       # configure + build Debug into build/
+make release     # configure + build Release into build/
+make clean       # delete build/
+make rebuild     # clean + debug
 ```
 
-- Or set `VCPKG_ROOT` and run CMake normally:
+### Visual Studio solutions
+
+Generate a solution for your VS version, then open it:
+
+```
+make vs2022      # generates build-vs2022/SpacedInvaders.sln  (requires CMake 3.5+)
+make vs2026      # generates build-vs2026/SpacedInvaders.slnx (requires CMake 4.2+)
+```
+
+Open the solution directly from PowerShell:
 
 ```powershell
-$env:VCPKG_ROOT='D:\vcpkg'
-cmake -S . -B build
+.\open-solution.ps1 22   # opens build-vs2022/SpacedInvaders.sln in Visual Studio 2022
+.\open-solution.ps1 26   # opens build-vs2026/SpacedInvaders.slnx in Visual Studio 2026
+```
+
+To clean a specific solution build:
+
+```
+make clean-vs2022
+make clean-vs2026
+make clean-all    # removes build/, build-vs2022/, and build-vs2026/
+```
+
+### Manual CMake (without make)
+
+```powershell
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=E:/vcpkg/scripts/buildsystems/vcpkg.cmake
 cmake --build build --config Debug
 ```
-
-- If you need to override the toolchain file for CI or a local build, pass `-DCMAKE_TOOLCHAIN_FILE=...` on the `cmake` configure command line.
-
-- Notes for subprojects:
-  - Avoid hardcoding the toolchain file in subproject `CMakeLists.txt` files; the top-level toolchain is propagated to subdirectories.
-  - Prefer `find_package(... CONFIG REQUIRED)` and target-based `target_link_libraries(myTarget PRIVATE pkg::pkg)` when possible so vcpkg-provided config packages are used.
 
 

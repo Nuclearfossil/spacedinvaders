@@ -28,6 +28,11 @@ endif()
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+# Flatten exe output into build/ for all configs so ../resources/ resolves to project root
+foreach(config DEBUG RELEASE RELWITHDEBINFO MINSIZEREL)
+	set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${config} "${CMAKE_BINARY_DIR}")
+endforeach()
+
 add_subdirectory(initialtemplate)
 add_subdirectory(WindowLayout)
 add_subdirectory(bitmaps)
@@ -36,3 +41,10 @@ add_subdirectory(animation01)
 add_subdirectory(AnimatedPixels)
 add_subdirectory(gameplay01)
 add_subdirectory(gameplay02)
+
+# Set VS debugger working directory to build/ so F5 in VS also finds ../resources/
+foreach(target initialtemplate WindowLayout bitmaps simplesprite01 animation01 AnimatedPixels gameplay01 gameplay02)
+	if(TARGET ${target})
+		set_target_properties(${target} PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_BINARY_DIR}")
+	endif()
+endforeach()
