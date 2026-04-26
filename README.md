@@ -69,3 +69,59 @@ I'll be building this out as I go:
 ## Related Materials
 
 
+
+## Building
+
+### Prerequisites
+
+- [CMake](https://cmake.org/) 3.10+
+- [vcpkg](https://github.com/microsoft/vcpkg) with Allegro 5 installed:
+  ```
+  vcpkg install allegro:x64-windows
+  ```
+- Set the `VCPKG_ROOT` environment variable to your vcpkg directory (e.g. `E:\vcpkg`), or pass the toolchain file explicitly.
+
+### Quick build (command line)
+
+A `Makefile` wraps the common CMake commands. Run these from the repo root:
+
+```
+make             # same as make debug
+make debug       # configure + build Debug into build/
+make release     # configure + build Release into build/
+make clean       # delete build/
+make rebuild     # clean + debug
+```
+
+### Visual Studio solutions
+
+Generate a solution for your VS version, then open it:
+
+```
+make vs2022      # generates build-vs2022/SpacedInvaders.sln  (requires CMake 3.5+)
+make vs2026      # generates build-vs2026/SpacedInvaders.slnx (requires CMake 4.2+)
+```
+
+Open the solution directly from PowerShell:
+
+```powershell
+.\open-solution.ps1 22   # opens build-vs2022/SpacedInvaders.sln in Visual Studio 2022
+.\open-solution.ps1 26   # opens build-vs2026/SpacedInvaders.slnx in Visual Studio 2026
+```
+
+To clean a specific solution build:
+
+```
+make clean-vs2022
+make clean-vs2026
+make clean-all    # removes build/, build-vs2022/, and build-vs2026/
+```
+
+### Manual CMake (without make)
+
+```powershell
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=E:/vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake --build build --config Debug
+```
+
+
